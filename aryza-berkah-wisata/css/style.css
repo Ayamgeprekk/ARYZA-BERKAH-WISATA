@@ -1,0 +1,526 @@
+/* ARYZA BERKAH WISATA - Custom Styles */
+:root {
+  --crimson: #A0001C;
+  --gold: #D4AF37;
+  --gold-gradient: linear-gradient(45deg, #D4AF37, #C89B2B, #F2D16B);
+  --soft-gray: #F5F5F5;
+  --white: #FFFFFF;
+  --gray-border: #E0E0E0;
+  --shadow: 0 8px 32px rgba(160,0,28,0.1);
+  --shadow-hover: 0 16px 48px rgba(160,0,28,0.2);
+}
+
+.hero-ramadhan-overlay {
+  background: linear-gradient(rgba(212,175,55,0.4), rgba(0,0,0,0.6));
+}
+
+.price-card {
+  background: linear-gradient(135deg, white 0%, #f8f9fa 100%);
+  border: none;
+  box-shadow: var(--shadow-hover);
+  border-radius: 24px;
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--gold-gradient);
+}
+
+.price-big {
+  font-size: 4rem;
+  font-weight: 900;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin: 1rem 0 0.5rem;
+  letter-spacing: -2px;
+}
+
+.fasilitas-include {
+  background: linear-gradient(135deg, #f0f8f0, #e8f5e8);
+  border-left: 5px solid var(--gold);
+}
+
+.fasilitas-exclude {
+  background: #f8f9fa;
+  border-left: 5px solid #dee2e6;
+  color: #6c757d;
+}
+
+.fasilitas-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.fasilitas-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.caption-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* Navbar */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 0;
+  background: rgba(255,255,255,0.95) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--crimson) !important;
+  font-weight: 600;
+}
+
+.navbar-brand {
+  color: var(--crimson) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--gold) !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: var(--gold);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 80%;
+  left: 20%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.gold-highlight {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.hero h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  letter-spacing: 1px;
+}
+
+.hero .lead {
+  font-weight: 300;
+}
+
+/* Buttons */
+.btn-crimson {
+  background: var(--crimson);
+  border: none;
+  color: var(--white);
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.btn-crimson:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  color: var(--white);
+}
+
+.btn-gold {
+  background: var(--gold-gradient);
+  border: none;
+  color: var(--crimson);
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  color: var(--crimson);
+}
+
+.btn-gold-outline {
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
+  background: transparent;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 50px;
+}
+
+.btn-gold-outline:hover {
+  background: var(--gold-gradient);
+  color: var(--crimson);
+  transform: translateY(-2px);
+}
+
+/* Cards */
+.card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212,175,55,0.1);
+}
+
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--gold);
+}
+
+.hover-zoom {
+  transition: all 0.4s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Sections */
+/* Package Cards */
+.package-card {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.package-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-hover);
+  border-color: #D4AF37;
+}
+
+.package-price {
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 10px 0;
+}
+
+#layanan .card {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  border-radius: 16px;
+}
+
+#layanan .card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, var(--gold), var(--gold-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.bg-crimson {
+  background: var(--crimson);
+}
+
+.bg-advantages {
+  background: linear-gradient(135deg, var(--soft-gray), var(--white));
+}
+
+#keunggulan .text-center.text-white h5,
+#keunggulan .text-center.text-white p {
+  color: white !important;
+}
+
+.text-crimson { color: var(--crimson) !important; }
+
+i.text-crimson {
+  text-shadow: 0 2px 8px rgba(160,0,28,0.3);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-gradient-darkgreen {
+  background: linear-gradient(135deg, var(--soft-gray), var(--white));
+}
+
+footer {
+  background: var(--crimson) !important;
+}
+
+footer a:hover {
+  color: #F2D16B !important;
+}
+
+/* Testimonial Carousel */
+.carousel-item img {
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(212,175,55,0.8);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* Form */
+#contactForm .form-control {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 12px 15px;
+  transition: border-color 0.3s ease;
+}
+
+#contactForm .form-control:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 0.2rem rgba(212,175,55,0.25);
+}
+
+/* Footer */
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--gold) !important;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: var(--shadow-hover);
+  z-index: 100;
+  animation: bounce 2s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whatsapp-icon {
+  font-size: 30px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
+  
+  .hero h1 {
+    font-size: 2rem !important;
+    line-height: 1.1;
+  }
+  
+  .hero .lead.fs-1 {
+    font-size: 1.3rem !important;
+  }
+  
+  .btn-lg {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+  
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+  }
+  
+  .whatsapp-icon {
+    font-size: 26px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+  
+  .price-big {
+    font-size: 2.8rem;
+  }
+  
+  .display-4 {
+    font-size: 2.2rem;
+  }
+  
+  .fasilitas-item {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .caption-overlay {
+    font-size: 1rem;
+    padding: 8px 16px;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  .hero .lead.fs-1 {
+    font-size: 1.1rem !important;
+  }
+  
+  .price-big {
+    font-size: 2.5rem;
+  }
+  
+  .price-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Scroll Indicator */
+.hero {
+  scroll-padding-top: 80px;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Islamic Touch - Subtle */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-green);
+}
